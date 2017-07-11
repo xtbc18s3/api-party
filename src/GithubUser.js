@@ -10,13 +10,20 @@ class GithubUser extends Component {
       user: {}
     }
 
-    this.fetchUserData()  
+    this.fetchUserData(props)  
   }
 
-  fetchUserData() {
-    fetch(`https://api.github.com/users/${this.props.match.params.username}`)
+  fetchUserData(props) {
+    fetch(`https://api.github.com/users/${props.match.params.username}`)
       .then(data => data.json())
       .then(user => this.setState({ user }))
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const locationChanged = nextProps.location !== this.props.location
+    if (locationChanged) {
+      this.fetchUserData(nextProps)
+    }
   }
 
   render() {
