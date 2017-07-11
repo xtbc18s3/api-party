@@ -1,0 +1,8 @@
+.rover-info {
+    margin: 40px;
+}
+
+.rover-info img {
+    border-radius: 10px;
+    max-width: 80%;
+}
