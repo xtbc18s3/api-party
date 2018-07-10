@@ -20,3 +20,31 @@ h1 {
 h3 {
   font: italic 400 30px/40px "Gentium Book Basic", serif;
 }
+
+.navLinks {
+  list-style: none;
+  padding-left: 0;
+}
+
+.navLinks li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.navLinks a {
+  color: #02b1ff;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navLinks a.active {
+  color: #F79824;
+}
+
+.navLinks a.active:hover {
+  color: #FDCA40;
+}
+
+.navLinks a:hover {
+  color: #0184be;
+}
