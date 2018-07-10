@@ -1,31 +1,27 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
-import './Github.css'
-import GithubUser from './GithubUser'
+import './Pokemon.css'
+import PokemonDetails from './PokemonDetails'
 
-class Github extends Component {
+class Pokemon extends Component {
   state = {
-    username: '',
+    pokemon: '',
   }
 
   handleChange = ev => {
-    this.setState({ username: ev.target.value })
+    this.setState({ pokemon: ev.target.value })
   }
 
   handleSubmit = ev => {
     ev.preventDefault()
-    this.props.history.push(`/github/${this.state.username}`)
+    this.props.history.push(`/pokemon/${this.state.pokemon}`)
   }
 
   render() {
     return (
-      <div className="Github">
-        <img
-          src="http://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png"
-          alt="GitHub"
-          className="logo"
-        />
+      <div className="Pokemon">
+        <h1>Pok&eacute;mon</h1>
 
         <form onSubmit={this.handleSubmit}>
           <div>
@@ -33,24 +29,24 @@ class Github extends Component {
               required
               autoFocus
               type="text"
-              value={this.state.username}
+              value={this.state.pokemon}
               onChange={this.handleChange}
             />
           </div>
           <div>
             <button type="submit">
-              Look up GitHub user
+              Look up a Pok&eacute;mon
             </button>
           </div>
         </form>
 
         <Route
-          path="/github/:username"
-          component={GithubUser}
+          path="/pokemon/:pokemon"
+          component={PokemonDetails}
         />
       </div>
     )
   }
 }
 
-export default Github
+export default Pokemon

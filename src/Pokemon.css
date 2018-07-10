@@ -1,14 +1,14 @@
-.Github {
+.Pokemon {
   width: 80%;
   margin: 0 auto;
 }
 
-.Github .logo {
+.Pokemon .logo {
   width: 100%;
   max-width: 500px;
 }
 
-.Github input {
+.Pokemon input {
   font-family: "Gentium Book Basic", serif;
   box-sizing: border-box;
   width: 80%;
@@ -21,7 +21,7 @@
   border: 1px solid #d1d5da;
 }
 
-.Github button {
+.Pokemon button {
   color: white;
   margin-top: 10px;
   width: 80%;
